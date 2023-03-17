@@ -1,0 +1,85 @@
+﻿<Window x:Class="SFKSKosov.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SFKSKosov"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.75*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox x:Name="Programm"
+                  Grid.RowSpan="3"
+                  Header="Программа"
+                  IsEnabled="False">
+            <Grid>
+                <Button x:Name="Answer"
+                    Content="Ответ"
+                    Click="Solving" 
+                        Margin="10,500,10,10" />
+
+                <TextBox Margin="20,20,20,380"
+                         x:Name="Textik"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1"
+                  Header="Гость">
+            <Grid>
+                <Button x:Name="Guest"
+                        Margin="10,10,10,10"
+                        Content="Guest"
+                        Click="Guesting"
+                        Grid.Row="0"/>
+            </Grid>
+        </GroupBox>
+
+        <Button x:Name="User"
+                Margin="10,10,10,183"
+                Content="User"
+                Click="Solving"
+                Grid.Row="1" 
+                Grid.Column="1" />
+
+        <GroupBox Grid.Column="1"
+                  Grid.Row="1"
+                  Header="Пользователь"
+                  Margin="0,50,0,0">
+            <Grid>
+                <TextBlock Text ="X                  Y                     Z                   V"
+                           Margin="15,13,5,123"/>
+                <TextBox x:Name="X" Margin="10,35,220,99"/>
+
+                <TextBox x:Name="Y" Margin="220,35,10,99"/>
+
+                <TextBox x:Name="Z" Margin="150,35,75,99"/>
+
+                <TextBox x:Name="V" Margin="75,35,149,99"/>
+            </Grid>
+        </GroupBox>
+
+        <Button x:Name="Admin"
+                Margin="10,10,10,184"
+                Content="User"
+                Click="Solving"
+                Grid.Row="2" 
+                Grid.Column="1" />
+
+        <GroupBox Grid.Column="1"
+                  Grid.Row="2"
+                  Header="Администратор"
+                  Margin="0,50,0,0">
+            <Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
