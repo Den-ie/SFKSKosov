@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practice13_15;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,13 @@ namespace SFKSKosov
         private void Guesting(object sender, RoutedEventArgs e)
         {
             Programm.IsEnabled = true;
+        }
+
+        private void WindowStart(object sender, RoutedEventArgs e)
+        {
+            Login password = new();
+            password.Owner = this;
+            password.ShowDialog();
         }
     }
 }
