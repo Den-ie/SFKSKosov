@@ -1,7 +1,4 @@
-﻿using SFKSKosov;
-using System;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,13 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
-namespace Practice13_15
+namespace SFKSKosov
 {
-    
-    public partial class Login : Window
+    /// <summary>
+    /// Логика взаимодействия для LoginAdmin.xaml
+    /// </summary>
+    public partial class LoginAdmin : Window
     {
-        public Login()
+        public LoginAdmin()
         {
             InitializeComponent();
         }
@@ -33,10 +31,10 @@ namespace Practice13_15
 
         private void Enter(object sender, RoutedEventArgs e)
         {
-            if (txtPas.Password == "123")
+            if (txtPas.Password == "123123")
             {
                 Close();
-                Vault.LogUser = 1;
+                Vault.LogAdmin = 1;
             }
             else
             {

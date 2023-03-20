@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SFKSKosov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" ResizeMode="CanMinimize">
+        Title="Call of Field 4022" Height="600" Width="800" ResizeMode="CanMinimize" Icon="/d3785b46b6b567f84b3cc955387b2182.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.75*"/>
@@ -28,7 +28,8 @@
                         Margin="10,500,10,10" />
 
                 <TextBox Margin="20,20,20,380"
-                         x:Name="Textik"/>
+                         x:Name="Textik"
+                         IsEnabled="False"/>
             </Grid>
         </GroupBox>
 
@@ -46,39 +47,47 @@
         <Button x:Name="User"
                 Margin="10,10,10,183"
                 Content="User"
-                Click="Solving"
+                Click="UserLog"
                 Grid.Row="1" 
                 Grid.Column="1" />
 
         <GroupBox Grid.Column="1"
                   Grid.Row="1"
                   Header="Пользователь"
-                  Margin="0,50,0,0">
+                  Margin="0,50,0,0"
+                  IsEnabled="False"
+                  x:Name="UserGroup">
             <Grid>
                 <TextBlock Text ="X                  Y                     Z                   V"
                            Margin="15,13,5,123"/>
-                <TextBox x:Name="X" Margin="10,35,220,99"/>
+                <TextBox x:Name="Xt" Margin="10,35,220,99"/>
 
-                <TextBox x:Name="Y" Margin="220,35,10,99"/>
+                <TextBox x:Name="Yt" Margin="220,35,10,99"/>
 
-                <TextBox x:Name="Z" Margin="150,35,75,99"/>
+                <TextBox x:Name="Zt" Margin="150,35,75,99"/>
 
-                <TextBox x:Name="V" Margin="75,35,149,99"/>
+                <TextBox x:Name="Vt" Margin="75,35,149,99"/>
             </Grid>
         </GroupBox>
 
         <Button x:Name="Admin"
                 Margin="10,10,10,184"
-                Content="User"
-                Click="Solving"
+                Content="Admin"
+                Click="Admining"
                 Grid.Row="2" 
                 Grid.Column="1" />
 
         <GroupBox Grid.Column="1"
                   Grid.Row="2"
                   Header="Администратор"
-                  Margin="0,50,0,0">
+                  Margin="0,50,0,0"
+                  x:Name="AdminGroup"
+                  IsEnabled="False">
             <Grid>
+                <Button x:Name="AdminButton"
+                        Click="AdminStuff"
+                        Content="Админ-кнопка"
+                        Margin="40"/>
             </Grid>
         </GroupBox>
     </Grid>
